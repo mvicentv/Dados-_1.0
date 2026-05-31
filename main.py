@@ -13,7 +13,7 @@ def roll_dice(amount: int, sides: int) -> list:
 
 
 def main():
-    amount = 5
+    amount = 6
     sides = 20
     
 
