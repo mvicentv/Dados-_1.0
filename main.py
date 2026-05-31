@@ -15,12 +15,12 @@ def roll_dice(amount: int, sides: int) -> list:
 def main():
     amount = 5
     sides = 6
-    
+
 
     results = roll_dice(amount, sides)
 
     for i, result in enumerate(results, start=1):
-        print(f"Lanzamiento {i} número obtenido {result}")
+        print(f"El lanzamiento {i} obtiene {result}")
         if i < len(results):
             time.sleep(5)
 
