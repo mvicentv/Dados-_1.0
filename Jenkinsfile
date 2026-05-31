@@ -50,8 +50,6 @@ pipeline {
                 }
             }
         }
-    }
-
         stage('Análisis estático SonarQube') {
             
             steps {
@@ -61,10 +59,11 @@ pipeline {
                     -Dsonar.login=$SONAR_TOKEN \
                     -Dsonar.host.url=http://localhost:9000
                     '''
-                }
                     }
+                }
+                    
+        }
     }
-
             
 
     post {
