@@ -15,9 +15,11 @@ pipeline {
         }
 
         stage('2. Checkout código') {
+        
             steps {
-                git 'https://github.com/mvicentv/Dados-_1.0.git'
+                git branch: 'main', url: 'https://github.com/mvicentv/Dados-_1.0.git'
             }
+            
         }
 
         stage('3. Build Docker image') {
