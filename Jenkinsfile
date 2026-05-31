@@ -52,6 +52,21 @@ pipeline {
         }
     }
 
+        stage('Análisis estático SonarQube') {
+            
+            steps {
+                withCredentials([string(credentialsId: 'SonarQube', variable: 'SONAR_TOKEN')]) {
+                    sh '''
+                    sonar-scanner \
+                    -Dsonar.login=$SONAR_TOKEN \
+                    -Dsonar.host.url=http://localhost:9000
+                    '''
+                }
+                    }
+    }
+
+            
+
     post {
         failure {
             echo 'El pipeline ha fallado.'
